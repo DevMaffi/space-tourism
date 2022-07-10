@@ -15,6 +15,7 @@
   display: flex
   justify-content: space-between
   align-items: center
+  column-gap: 1rem
 
 .nav__logo img
   +plugins.size(48px)
@@ -32,10 +33,10 @@
     padding: 0 48px
 
 .nav__accent
-  +plugins.size(30vw, 1px)
+  flex: 1
+  height: 1px
   background-color: var(--first-color)
-  +plugins.position(absolute, 50% null null 0)
-  transform: translateX(calc(-100% + 30px))
+  transform: translateX(64px)
   opacity: .25
 
   // large devices
