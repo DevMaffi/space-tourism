@@ -6,6 +6,9 @@
 // mixins
 @use '../base/mixins'
 
+// media-lib
+@use '../base/media-lib'
+
 /* NAV
 
 .nav
@@ -19,9 +22,13 @@
 .nav__links
   display: flex
   column-gap: 2.6rem
-  padding: 0 125px
+  padding: 0 165px 0 125px
   +mixins.bg-blur
   position: relative
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    padding: 0 48px
 
 .nav__accent
   +plugins.size(30vw, 1px)
@@ -29,6 +36,10 @@
   +plugins.position(absolute, 50% null null 0)
   transform: translateX(calc(-100% + 30px))
   opacity: .25
+
+  // large devices
+  +media-lib.breakpoint(media-lib.$xl)
+    display: none
 
 .nav__link
   &.active a:before
@@ -41,10 +52,14 @@
   height: var(--header-height)
   letter-spacing: .15rem
   font:
-    size: .9rem
+    size: var(--nav-font-size)
     family: 'Barlow Condensed', sans-serif
   text-transform: uppercase
   position: relative
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    letter-spacing: .13rem
 
   &:before
     content: ''
@@ -61,3 +76,7 @@
 .nav__link span
   margin-right: .6rem
   font-weight: 700
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    display: none

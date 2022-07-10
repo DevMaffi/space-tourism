@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// modules
+@use '../base/media-lib'
 
 /* HEADER
 
@@ -10,3 +14,8 @@
   padding-left: 55px
   +plugins.position(fixed, 0 null null 0)
   z-index: var(--z-fixed)
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    margin-top: initial
+    padding-left: 40px

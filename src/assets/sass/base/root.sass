@@ -1,3 +1,7 @@
+// Modules
+
+@use 'media-lib'
+
 /* ROOT STYLES
 
 :root
@@ -15,6 +19,8 @@
   // fonts
   --body-font: 'Barlow', sans-serif
 
+  --nav-font-size: .9rem
+
   // transitions
   --hover-transition: all .4s ease
 
@@ -22,3 +28,5 @@
   --z-fixed: 100
 
   // responsive typography
+  +media-lib.breakpoint(media-lib.$md)
+    --nav-font-size: .8rem

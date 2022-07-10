@@ -4,8 +4,8 @@
 
 // Mixins
 
-// mobile first
-=breakpoint($br, $media-feature: 'min-width')
+// desktop first
+=breakpoint($br, $media-feature: 'max-width')
   @media screen and (#{$media-feature}: $br)
     @content
 
