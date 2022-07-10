@@ -1,1 +1,63 @@
+// Modules
+
+// plugins
+@use '../plugins/plugins-dir' as plugins
+
+// mixins
+@use '../base/mixins'
+
 /* NAV
+
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.nav__logo img
+  +plugins.size(48px)
+
+.nav__links
+  display: flex
+  column-gap: 2.6rem
+  padding: 0 125px
+  +mixins.bg-blur
+  position: relative
+
+.nav__accent
+  +plugins.size(30vw, 1px)
+  background-color: var(--first-color)
+  +plugins.position(absolute, 50% null null 0)
+  transform: translateX(calc(-100% + 30px))
+  opacity: .25
+
+.nav__link
+  &.active a:before
+    width: 100%
+    opacity: 1
+
+.nav__link a
+  display: inline-flex
+  align-items: center
+  height: var(--header-height)
+  letter-spacing: .15rem
+  font:
+    size: .9rem
+    family: 'Barlow Condensed', sans-serif
+  text-transform: uppercase
+  position: relative
+
+  &:before
+    content: ''
+    +plugins.size(0, 3px)
+    background-color: var(--first-color)
+    +plugins.position(absolute, null 50% 0 null)
+    transform: translateX(50%)
+    transition: var(--hover-transition)
+    opacity: .5
+
+  &:hover:before
+    width: 100%
+
+.nav__link span
+  margin-right: .6rem
+  font-weight: 700

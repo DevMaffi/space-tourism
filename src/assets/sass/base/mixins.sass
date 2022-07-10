@@ -8,3 +8,9 @@
 =breakpoint($br, $media-feature: 'min-width')
   @media screen and (#{$media-feature}: $br)
     @content
+
+=bg-blur
+  background: rgba(255, 255, 255, .04)
+
+  @supports (backdrop-filter: blur(80px))
+    backdrop-filter: blur(80px)

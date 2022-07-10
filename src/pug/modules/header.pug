@@ -1,2 +1,19 @@
 // HEADER
 header.header
+
+  // NAV
+  nav.nav
+
+    // NAV LOGO
+    a.nav__logo(href="#home")
+      img(src="@img/logo.png", alt="logo")
+
+    // NAV LINKS
+    ul.nav__links
+      span.nav__accent
+
+      each link, i in navLinks
+        li.nav__link(class=`${i === 0 ? 'active' : ''}`)
+          a(href=`#${link.rel}`)
+            span= `${i < 10 ? '0' + i : i}`
+            |#{link.label}
