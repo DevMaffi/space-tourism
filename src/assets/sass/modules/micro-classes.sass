@@ -1,4 +1,13 @@
+// Modules
+
+@use '../base/media-lib'
+
 /* MICRO CLASSES
 
 .show-menu
-  right: 0
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    overflow: hidden 
+
+.show-menu .nav__menu
+  transform: translateX(0)

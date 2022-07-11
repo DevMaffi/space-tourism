@@ -10,14 +10,8 @@
     @content
 
 =bg-blur
-  background: rgba(255, 255, 255, .04)
+  background: var(--container-color)
 
   @supports (backdrop-filter: blur(80px))
     backdrop-filter: blur(80px)
-
-  // small devices
-  +breakpoint(vars.$xs)
-    background: var(--container-color)
-
-    @supports (backdrop-filter: blur(80px))
-      background: rgba(255, 255, 255, .04)
+    background: rgba(255, 255, 255, .04)

@@ -63,10 +63,11 @@
     flex-direction: column
     row-gap: 1.8rem
     +plugins.size(66vw, 100%)
-    padding: 118px 0 0 32px
-    +plugins.position(fixed, 0 -100% null null)
-    z-index: -1
+    padding: 118px 0 100px 32px
+    +plugins.position(fixed, 0 0 null null)
+    transform: translateX(100%)
     transition: var(--base-transition)
+    overflow-y: scroll
 
 .nav__link
   &.active a:before

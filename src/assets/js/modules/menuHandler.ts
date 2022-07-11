@@ -2,8 +2,6 @@
 
 const menuBtn = document.querySelector('.nav__hamburger')! as HTMLButtonElement
 
-const menu = document.querySelector('.nav__menu')! as HTMLUListElement
-
 const menuLinks = document.querySelectorAll(
   '.nav__link'
 )! as NodeListOf<HTMLLIElement>
@@ -12,12 +10,12 @@ const menuLinks = document.querySelectorAll(
 
 const toggleMenu = (): void => {
   menuBtn.classList.toggle('is-active')
-  menu.classList.toggle('show-menu')
+  document.body.classList.toggle('show-menu')
 }
 
 const hideMenu = (): void => {
   menuBtn.classList.remove('is-active')
-  menu.classList.remove('show-menu')
+  document.body.classList.remove('show-menu')
 }
 
 // Implement handlers creator

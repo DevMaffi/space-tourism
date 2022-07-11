@@ -1,19 +1,13 @@
 // Modules
 
-// plugins
-@use '../plugins/plugins-dir' as plugins
-
-// modules
 @use '../base/media-lib'
 
 /* HEADER
 
 .header
-  +plugins.size(100%, var(--header-height))
+  height: var(--header-height)
   margin-top: 40px
   padding-left: 55px
-  +plugins.position(fixed, 0 null null 0)
-  z-index: var(--z-fixed)
   transition: var(--orientation-transition)
 
   // medium devices
