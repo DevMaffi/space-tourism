@@ -16,9 +16,30 @@
   justify-content: space-between
   align-items: center
   column-gap: 1rem
+  height: var(--header-height)
+
+  // large devices
+  +media-lib.breakpoint(media-lib.$xl)
+    column-gap: initial
 
 .nav__logo img
   +plugins.size(48px)
+
+  // small devices
+  +media-lib.breakpoint(media-lib.$sm)
+    +plugins.size(40px)
+
+.nav__accent
+  flex: 1
+  height: 1px
+  background-color: var(--first-color)
+  transform: translateX(64px)
+  z-index: 1
+  opacity: .25
+
+  // large devices
+  +media-lib.breakpoint(media-lib.$xl)
+    display: none
 
 .nav__menu
   display: flex
@@ -32,16 +53,20 @@
   +media-lib.breakpoint(media-lib.$md)
     padding: 0 48px
 
-.nav__accent
-  flex: 1
-  height: 1px
-  background-color: var(--first-color)
-  transform: translateX(64px)
-  opacity: .25
+  // small devices
+  +media-lib.breakpoint(media-lib.$sm)
+    padding: 0 38px
+    column-gap: 2rem
 
-  // large devices
-  +media-lib.breakpoint(media-lib.$xl)
-    display: none
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    flex-direction: column
+    row-gap: 1.8rem
+    +plugins.size(66vw, 100%)
+    padding: 118px 0 0 32px
+    +plugins.position(fixed, 0 -100% null null)
+    z-index: -1
+    transition: var(--base-transition)
 
 .nav__link
   &.active a:before
@@ -64,6 +89,14 @@
   +media-lib.breakpoint(media-lib.$md)
     letter-spacing: .13rem
 
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    height: initial
+    letter-spacing: .15rem
+
+    &:before
+      display: none
+
   &:before
     content: ''
     +plugins.size(0, 3px)
@@ -83,3 +116,14 @@
   // medium devices
   +media-lib.breakpoint(media-lib.$md)
     display: none
+
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    display: block
+
+.nav__hamburger
+  display: none
+
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    display: block

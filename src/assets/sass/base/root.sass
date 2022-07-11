@@ -12,6 +12,7 @@
   --first-color: hsl(0, 0%, 100%)
   --second-color: hsl(229, 77%, 90%)
   --body-color: hsl(230, 35%, 7%)
+  --container-color: hsl(235, 18%, 13%)
 
   --black: hsl(0, 0%, 0%)
   --white: hsl(0, 0%, 100%)
@@ -22,12 +23,20 @@
   --nav-font-size: .9rem
 
   // transitions
+  --base-transition: all .4s ease
   --hover-transition: all .4s ease
   --orientation-transition: all .3s ease
 
   // z-index
   --z-fixed: 100
 
+  // responsive dimensions
+  +media-lib.breakpoint(media-lib.$xs)
+    --header-height: 88px
+
   // responsive typography
   +media-lib.breakpoint(media-lib.$md)
     --nav-font-size: .8rem
+
+  +media-lib.breakpoint(media-lib.$xs)
+    --nav-font-size: .9rem
