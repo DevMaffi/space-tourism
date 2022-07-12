@@ -65,6 +65,7 @@
     +plugins.size(66vw, 100%)
     padding: 118px 0 100px 32px
     +plugins.position(fixed, 0 0 null null)
+    z-index: var(--z-fixed)
     transform: translateX(100%)
     transition: var(--base-transition)
     overflow-y: scroll
@@ -124,6 +125,7 @@
 
 .nav__hamburger
   display: none
+  z-index: var(--z-fixed)
 
   // small devices
   +media-lib.breakpoint(media-lib.$xs)
