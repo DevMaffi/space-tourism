@@ -1,0 +1,41 @@
+// HOME
+section.section.home#home
+
+  // HOME CONTAINER
+  .home__container.container
+
+    // HOME DATA
+    .home__data
+      h5.heading.heading-5.home__subtitle.
+        So, you want to travel to
+      h1.heading.heading-1.home__title.
+        Space
+
+      p.text.home__descr.
+        Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+
+    // HOME BUTTON
+    button.button.home__button(type="button") Explore
+
+  // HOME BITMAP
+  picture
+    //- large devices webp
+    source(media="(min-width: 768px)" srcset="@img/home-desktop-bg@2x.webp 2880w, @img/home-desktop-bg.webp 1440w", type="image/webp")
+
+    //- large devices jpeg
+    source(media="(min-width: 768px)" srcset="@img/home-desktop-bg@2x.jpg 2880w, @img/home-desktop-bg.jpg 1440w", type="image/jpeg")
+
+    //- medium devices webp
+    source(media="(min-width: 375px)" srcset="@img/home-tablet-bg@2x.webp 1536w, @img/home-tablet-bg.webp 768w", type="image/webp")
+
+    //- medium devices jpeg
+    source(media="(min-width: 375px)" srcset="@img/home-tablet-bg@2x.jpg 1536w, @img/home-tablet-bg.jpg 768w", type="image/jpeg")
+
+    //- small devices webp
+    source(srcset="@img/home-mobile-bg@2x.webp 750w, @img/home-mobile-bg.webp 375w", type="image/webp")
+
+    //- small devices jpeg
+    source(srcset="@img/home-mobile-bg@2x.jpg 750w, @img/home-mobile-bg.jpg 375w", type="image/jpeg")
+
+    //- default fallback img
+    img.home__bitmap(src="@img/home-desktop-bg.jpg", alt="bitmap")

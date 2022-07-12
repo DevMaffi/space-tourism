@@ -1,1 +1,37 @@
+// Modules
+
+@use '../../plugins/plugins-dir' as plugins
+
 /* BUTTONS
+
+.button
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  +plugins.size(275px)
+  background-color: var(--first-color)
+  border: none
+    radius: 50%
+  outline: none
+  font:
+    size: 1.8rem
+    family: 'Bellefair', serif
+  text-transform: uppercase
+  letter-spacing: .1rem
+  line-height: initial
+  position: relative
+  transition: var(--hover-transition)
+  cursor: pointer
+
+  &:before
+    content: ''
+    +plugins.size(100%)
+    background-color: var(--first-color)
+    border-radius: 50%
+    +plugins.position(absolute, 50% null null 50%)
+    transform: translate(-50%, -50%)
+    animation: 2s ease-out infinite alternate pulse 
+    opacity: .1
+
+  &:hover
+    letter-spacing: .3rem
