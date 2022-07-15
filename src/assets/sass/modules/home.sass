@@ -12,6 +12,14 @@
   margin: 150px 0 130px
   padding-top: 100px
 
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    margin: 5px 0 90px
+
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    margin: 0 0 50px
+
 .home__container
   display: flex
   justify-content: space-between
@@ -30,6 +38,10 @@
   +media-lib.breakpoint(media-lib.$md)
     text-align: center
 
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    max-width: initial
+
 .home__subtitle,
 .home__title
   margin-bottom: 1.3rem
@@ -40,6 +52,10 @@
   // medium devices
   +media-lib.breakpoint(media-lib.$md)
     line-height: 1.6rem
+
+  // small devices
+  +media-lib.breakpoint(media-lib.$xs)
+    line-height: 1.4rem
 
 .home__button
   // large devices

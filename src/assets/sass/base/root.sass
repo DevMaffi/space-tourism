@@ -25,6 +25,7 @@
   --h1-font-size: 150px
   --h5-font-size: 1.6rem
   --body-font-size: 1rem
+  --button-font-size: 1.8rem
   --nav-font-size: .9rem
 
   // transitions
@@ -45,6 +46,8 @@
   // small devices
   +media-lib.breakpoint(media-lib.$xs)
     --header-height: 88px
+    --button-size: 150px
+    --button-hover-size: 240px
 
   // Responsive typography
 
@@ -56,4 +59,8 @@
 
   // small devices
   +media-lib.breakpoint(media-lib.$xs)
+    --h1-font-size: 80px
+    --h5-font-size: .9rem
+    --body-font-size: .83rem
+    --button-font-size: 1.1rem
     --nav-font-size: .9rem
