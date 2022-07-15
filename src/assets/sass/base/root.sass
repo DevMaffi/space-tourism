@@ -7,6 +7,8 @@
 :root
   // dimensions
   --header-height: 96px
+  --button-size: 275px
+  --button-hover-size: 450px 
 
   // colors
   --first-color: hsl(0, 0%, 100%)
@@ -20,6 +22,9 @@
   // fonts
   --body-font: 'Barlow', sans-serif
 
+  --h1-font-size: 150px
+  --h5-font-size: 1.6rem
+  --body-font-size: 1rem
   --nav-font-size: .9rem
 
   // transitions
@@ -30,13 +35,25 @@
   // z-index
   --z-fixed: 100
 
-  // responsive dimensions
+  // Responsive dimensions
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    --button-size: 242px
+    --button-hover-size: 385px
+
+  // small devices
   +media-lib.breakpoint(media-lib.$xs)
     --header-height: 88px
 
-  // responsive typography
+  // Responsive typography
+
+  // medium devices
   +media-lib.breakpoint(media-lib.$md)
+    --h5-font-size: 1.1rem
+    --body-font-size: .9rem
     --nav-font-size: .8rem
 
+  // small devices
   +media-lib.breakpoint(media-lib.$xs)
     --nav-font-size: .9rem

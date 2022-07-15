@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media-lib
+@use '../base/media-lib.sass'
 
 /* HOME
 
@@ -12,8 +16,18 @@
   justify-content: space-between
   align-items: flex-end
 
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    flex-direction: column
+    align-items: center
+    row-gap: 156px
+
 .home__data
   max-width: 450px
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    text-align: center
 
 .home__subtitle,
 .home__title
@@ -21,6 +35,19 @@
 
 .home__descr
   line-height: 1.8rem
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    line-height: 1.6rem
+
+.home__button
+  // large devices
+  +media-lib.breakpoint(media-lib.$xl)
+    transform: translateX(calc((var(--button-size) - var(--button-hover-size)) / 2))
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    transform: initial
 
 .home__bitmap
   +plugins.size(100%)

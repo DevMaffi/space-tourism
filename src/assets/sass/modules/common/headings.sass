@@ -1,3 +1,7 @@
+// Modules
+
+@use '../../base/media-lib.sass'
+
 /* HEADINGS
 
 .heading
@@ -7,11 +11,15 @@
   text-transform: uppercase
 
 .heading-1
-  font-size: 150px
+  font-size: var(--h1-font-size)
 
 .heading-5
   font:
-    size: 1.6rem
+    size: var(--h5-font-size)
     family: 'Barlow Condensed', sans-serif
   letter-spacing: .26rem
   color: var(--second-color)
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    letter-spacing: .18rem

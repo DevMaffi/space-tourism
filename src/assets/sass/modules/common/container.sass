@@ -1,5 +1,18 @@
+// Modules
+
+@use '../../base/media-lib'
+
 /* CONTAINER
 
 .container
   max-width: 1100px
   margin: 0 auto
+
+  // large devices
+  +media-lib.breakpoint(media-lib.$xl)
+    max-width: initial
+    margin: 0 55px
+
+  // medium devices
+  +media-lib.breakpoint(media-lib.$md)
+    margin: 0 40px
